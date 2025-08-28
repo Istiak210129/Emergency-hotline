@@ -66,7 +66,9 @@ for(let call of calls){
 
           
                   let div = document.createElement("div");
-            div.innerHTML = `<div id="history-contain" class="history flex  p-2 items-center justify-between my-4 rounded-lg bg-[#F2F2F2]">
+            div.innerHTML = `
+            <section id="Remove">
+             <div id="history-contain" class="history flex  p-2 items-center justify-between my-4 rounded-lg bg-[#F2F2F2]">
                     <div class="content">
                     <h1 id="serviceh" class="font-bold">${data.name}</h1>
                     <p id="servicehno" class="text-gray-600">${data.num}</p>
@@ -74,14 +76,30 @@ for(let call of calls){
                     <div id="local-time" class="time">
                         <h2>${data.time}</h2>
                     </div>
-                </div>`;
+                </div>
+            </section>
+           `;
 
             historyCard.appendChild(div);
 
-           
-
-          
+               
     })
     
-
 }
+
+// clear button 
+
+let clearBtn= document.getElementById("clearBtn");
+
+clearBtn.addEventListener("click",function(){
+
+
+   let historyClass = document.getElementsByClassName("history");
+
+   for(let cls of historyClass)
+   {
+        cls.style.display = "none";
+   }
+  
+    
+})
