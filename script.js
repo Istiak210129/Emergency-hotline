@@ -21,7 +21,7 @@ for(let heart of hearts)
 
  // function for alert message
 function getalert(name,number){
-    alert(`${name}  ${" "} ${number}`)
+    alert(` 📞 Calling ${name} ${":"} ${number}`)
 }
 
 
@@ -41,7 +41,7 @@ for(let call of calls){
     let serviceNumber = call.parentNode.parentNode.childNodes[7].innerText;
     // console.log(serviceName,serviceNumber);
 
-    getalert(serviceName,serviceNumber);
+    
 
         let coin = document.getElementById("coinBtn");
           if(coin.innerText < 20  )
@@ -51,6 +51,8 @@ for(let call of calls){
         }
 
         coin.innerText =  Number(coin.innerText) - 20;
+
+        getalert(serviceName,serviceNumber);
 
       
 
