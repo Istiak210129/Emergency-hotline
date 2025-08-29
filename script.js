@@ -116,7 +116,7 @@ for(let copy of copies)
 
           let copyPaste = copy.parentNode.parentNode.childNodes[7].textContent;
         navigator.clipboard.writeText(copyPaste);
-          alert(`copied text: ${copyPaste}`);
+          alert(`copied Number: ${copyPaste}`);
           
     })
 
